@@ -1,0 +1,43 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row g-2" style="margin: 5%">
+        <div class="col-md-3">
+            <div class="card h-100 bg-primary text-light border-0">
+                <img src="{% static 'images/atten01.jpg' %}" class="card-img-top object-fit-cover" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Coding</h5>
+                    <p class="card-text">Flutter, Kotlin, Python, JAVA, C+, HTML, CSS, JS, Vue, React, SQL</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100 bg-success text-light border-0">
+                <img src="{% static 'images/atten02.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Video Games</h5>
+                    <p class="card-text">Action, Adventure, Role-Play, Simulation, Survival, Puzzle, Farm, Indie, Tower Defense, Visual Novel,</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100 bg-danger text-light border-0">
+                <img src="{% static 'images/atten03.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Music</h5>
+                    <p class="card-text">Pop, Rock, RnB, Hip-Hop, Folk, EDM, Latin, Indie</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100 bg-dark text-light border-0">
+                <img src="{% static 'images/atten04.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Tech</h5>
+                    <p class="card-text">Artificial intelligence (AI), Robotic Process Automation (RPA),
+                        Quantum Computing, Internet of Things (IoT), Cyber Security, Blockchain Technology, 5G Network</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
