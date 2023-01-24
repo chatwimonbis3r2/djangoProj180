@@ -1,39 +1,51 @@
 {% extends 'Base.html' %}
 {% load static %}
 {% block content %}
-    <div class="text-center">
-        <h1 class="text-primary">Show Data</h1>
-        <hr>
-        <p class="lead m-0"><strong>Name:</strong> {{ name }}</p>
-        <p class="lead m-0"><strong>Id:</strong> {{ id }}</p>
-        <p class="lead m-0"><strong>Age:</strong> {{ age }}</p>
-        <p class="lead m-0"><strong>Birthday:</strong> {{ birthday }}</p>
-        <p class="lead m-0"><strong>Weight:</strong> {{ weight }} Kg.</p>
-        <p class="lead m-0"><strong>Height:</strong> {{ height }} Cm.</p>
-        <p class="lead m-0"><strong>Flavors:</strong> {{ flavors }}</p>
-        <p class="lead m-0"><strong>Colors:</strong> {{ colors }}</p>
-        <p class="lead m-0"><strong>Weather:</strong> {{ weather }}</p>
-        <p class="lead m-0"><strong>Motto:</strong> {{ motto }}</p>
-        <hr>
-        <div class="table-responsive-md">
-            <table class="table table-hover">
-                <tr class="text-primary">
-                    <th scope="col">Id</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Price</th>
-                </tr>
-                {% for product in products %}
-                    <tr class="align-middle">
-                        <td>{{ product.0 }}</td>
-                        <td>
-                            <img src="{{ product.1 }}" style="width: 200px;height: 200px">
-                        </td>
-                        <td class="text-primary"><strong>{{ product.2 }}</strong></td>
-                        <td class="text-dark-emphasis"><strong>฿ {{ product.3 }}</strong></td>
+    <div class="text-light bg-dark p-md-3 rounded mb-2">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'images/showdata00.jpg' %}"  class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-md-6">
+                <h1 class="text-danger">Show Data</h1>
+                <hr>
+                <p class="lead m-0"><strong>Name:</strong> {{ name }}</p>
+                <p class="lead m-0"><strong>Id:</strong> {{ id }}</p>
+                <p class="lead m-0"><strong>Age:</strong> {{ age }}</p>
+                <p class="lead m-0"><strong>Birthday:</strong> {{ birthday }}</p>
+                <p class="lead m-0"><strong>Weight:</strong> {{ weight }} Kg.</p>
+                <p class="lead m-0"><strong>Height:</strong> {{ height }} Cm.</p>
+                <p class="lead m-0"><strong>Flavors:</strong> {{ flavors }}</p>
+                <p class="lead m-0"><strong>Colors:</strong> {{ colors }}</p>
+                <p class="lead m-0"><strong>Weather:</strong> {{ weather }}</p>
+                <p class="lead m-0"><strong>Motto:</strong> {{ motto }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="text-light bg-dark p-md-3 rounded">
+        <div class="text-center">
+            <h1 class="text-danger">Show Table</h1>
+            <hr>
+            <div class="table-responsive-md tab">
+                <table class="table">
+                    <tr class="text-danger">
+                        <th scope="col" class="display-6">ID</th>
+                        <th scope="col" class="display-6">IMAGE</th>
+                        <th scope="col" class="display-6">NAME</th>
+                        <th scope="col" class="display-6">PRICE</th>
                     </tr>
-                {% endfor %}
-            </table>
+                    {% for product in products %}
+                        <tr class="align-middle text-light">
+                            <td>{{ product.0 }}</td>
+                            <td>
+                                <img src="{{ product.1 }}" style="width: 200px;height: 200px" alt="Product Images">
+                            </td>
+                            <td class="text-danger"><strong>{{ product.2 }}</strong></td>
+                            <td><strong>฿ {{ product.3 }}</strong></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
         </div>
     </div>
 {% endblock %}
